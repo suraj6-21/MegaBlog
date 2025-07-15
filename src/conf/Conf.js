@@ -1,4 +1,4 @@
-const Config = {
+const Conf = {
     appwriteURL: String(import.meta.env.VITE_APPWRITE_URL),
     appwriteProjectID: String(import.meta.env.VITE_APPWRITE_PROJECT_ID),
     appwriteProjectID: String(import.meta.env.VITE_APPWRITE_PROJECT_ID),
@@ -8,4 +8,4 @@ const Config = {
 
 }
 
-export default Config;
+export default Conf;
