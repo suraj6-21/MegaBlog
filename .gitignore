@@ -1,24 +1,94 @@
 # Logs
-logs
+logs/
 *.log
 npm-debug.log*
 yarn-debug.log*
 yarn-error.log*
 pnpm-debug.log*
 lerna-debug.log*
+output.log
+error.log
+debug.log
 
-node_modules
-dist
-dist-ssr
-*.local
+# Dependency directories
+node_modules/
+jspm_packages/
+bower_components/
+
+# Build artifacts
+dist/
+build/
+out/
+es/
+lib/
+tmp/
+*.tmp
+temp/
+.cache/
+.next/ # For Next.js
+.nuxt/ # For Nuxt.js
+.parcel-cache/ # For Parcel
+public/build/ # Common build output within public
+
+# Environment variables
+.env
+.env.local
+.env.development.local
+.env.test.local
+.env.production.local
+.env.*.local
+.flaskenv
+.venv # Python virtual environments (if mixed project)
 
 # Editor directories and files
-.vscode/*
-!.vscode/extensions.json
-.idea
-.DS_Store
+.vscode/
+!.vscode/extensions.json # Keep extensions.json if you want to recommend extensions
+.idea/ # IntelliJ IDEA
+.DS_Store # macOS specific
 *.suo
 *.ntvs*
 *.njsproj
 *.sln
 *.sw?
+*.bak
+*~.nib
+Thumbs.db # Windows specific
+ehthumbs.db # Windows specific
+.project
+.classpath
+.settings/ # Eclipse specific
+
+# System Files
+.fuse_hidden*
+.directory
+
+# NPM specific
+npm-shrinkwrap.json
+package-lock.json # Modern npm lock file (often committed, but ignore if you prefer yarn.lock/pnpm-lock.yaml exclusively)
+yarn.lock # Yarn lock file (often committed, but ignore if you prefer package-lock.json/pnpm-lock.yaml exclusively)
+pnpm-lock.yaml # pnpm lock file (often committed, but ignore if you prefer package-lock.json/yarn.lock exclusively)
+.npm/
+
+# Miscellaneous
+coverage/ # Test coverage reports
+*.sublime-project
+*.sublime-workspace
+*.creator
+*.komodoproject
+.eslintcache
+.stylelintcache
+.sass-cache/
+.webpress/
+.nyc_output/
+.test_output/
+*.sqlite
+*.sqlite3
+*.db
+!src/
+!public/
+!assets/
+!static/
+
+# For macOS
+.localized
+.Trashes
