@@ -91,4 +91,4 @@ coverage/ # Test coverage reports
 
 # For macOS
 .localized
-.Trashes
+.Trashes.env
