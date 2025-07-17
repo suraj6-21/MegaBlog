@@ -1,7 +1,9 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../../Store/AuthSlice'
-import { Logo, Button, Input } from '../index'
+import Logo  from '../Logo'
+import Input from '../Input'
+import Button from "../Button";
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 import authService from '../../appwrite/Auth'
@@ -42,7 +44,7 @@ const Login = () => {
                     Don&apos;t have any account?&nbsp;
                     <Link
                         to="/signup"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium cursor-pointer text-primary transition-all duration-200 hover:underline"
                     >
                         Sign Up
                     </Link>
@@ -77,7 +79,7 @@ const Login = () => {
                         />
                         <Button
                             type="submit"
-                            className="w-full"
+                            className="w-full cursor-pointer"
                         >Sign in</Button>
                     </div>
                 </form>

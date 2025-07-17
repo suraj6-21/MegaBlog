@@ -1,8 +1,8 @@
 import React, { useState } from 'react'
 import authService from '../../appwrite/Auth'
 import { useNavigate, Link } from 'react-router-dom'
-import { Login } from '../../Store/AuthSlice'
-import { Button, Logo, Input } from "../index"
+import { login } from '../../Store/AuthSlice'
+import { Button, Logo, Input } from "../index";
 import { useDispatch } from 'react-redux'
 import { useForm } from 'react-hook-form'
 
@@ -20,7 +20,7 @@ const SignUp = () => {
             if (userData) {
                 const currentUser = await authService.getCurrentUser()
                 if (currentUser) {
-                    dispatch(Login(currentUser))
+                    dispatch(login(currentUser))
                     navigate("/")
                 }
             }
@@ -44,7 +44,7 @@ const SignUp = () => {
                     Already have an account?&nbsp;
                     <Link
                         to="/login"
-                        className="font-medium text-primary transition-all duration-200 hover:underline"
+                        className="font-medium cursor-pointer text-primary transition-all duration-200 hover:underline"
                     >
                         Sign In
                     </Link>
@@ -80,7 +80,7 @@ const SignUp = () => {
                                 required: true,
                             })}
                         />
-                        <Button type="submit" className="w-full">
+                        <Button type="submit" className="w-full cursor-pointer">
                             Create Account
                         </Button>
                     </div>
