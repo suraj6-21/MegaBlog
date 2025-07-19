@@ -1,6 +1,6 @@
 import { useSelector } from 'react-redux'
 import { useNavigate } from 'react-router-dom'
-import React, { useEffect, useState } from 'react'
+import { useEffect, useState } from 'react'
 import LoadingSpinner from "../../UX/Loader/LoadingSpinner"
 
 export default function Protected({ children, authentication = true }) {
@@ -11,7 +11,7 @@ export default function Protected({ children, authentication = true }) {
 
     useEffect(() => {
         if (authentication && authStatus !== authentication) {
-            navigate("/login")
+            navigate("/")
         } else if (!authentication && authStatus !== authentication) {
             navigate("/")
         }

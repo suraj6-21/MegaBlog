@@ -1,7 +1,7 @@
 import React, { useState } from 'react'
 import { Link, useNavigate } from 'react-router-dom'
 import { login as authLogin } from '../../Store/AuthSlice'
-import Logo  from '../Logo'
+import Logo from '../Logo'
 import Input from '../Input'
 import Button from "../Button";
 import { useDispatch } from 'react-redux'
@@ -14,7 +14,7 @@ const Login = () => {
     const { register, handleSubmit } = useForm()
     const [error, setError] = useState("")
 
-    const logins = async (data) => {
+    const logins = async (data, { onLoginSuccess }) => {
         setError("")
         try {
             const session = await authService.login(data)
@@ -22,6 +22,7 @@ const Login = () => {
                 const userData = await authService.getCurrentUser()
                 if (userData) {
                     dispatch(authLogin(userData))
+                    onLoginSuccess()
                     navigate("/")
                 }
             }
